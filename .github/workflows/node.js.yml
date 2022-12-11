@@ -38,10 +38,6 @@ jobs:
         run: |
           npm run build:prod:ci
 
-      - name: Test Development
-        run: |
-          npm run test:dev:ci
-
       - name: Test Production
         run: |
           npm run test:prod:ci
@@ -76,10 +72,6 @@ jobs:
       - name: Build Production
         run: |
           npm run build:prod:ci
-
-      - name: Test Development
-        run: |
-          npm run test:dev:ci
 
       - name: Test Production
         run: |
