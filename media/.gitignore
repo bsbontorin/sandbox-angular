@@ -1,0 +1,11 @@
+# Filter everything
+*
+
+# Except .gitignore
+!.gitignore
+
+# Except .md
+!*.md
+
+# Except .png
+!*.png
