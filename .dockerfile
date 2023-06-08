@@ -19,5 +19,8 @@ RUN npm update --save
 RUN ncu -u (npm install -g npm-check-updates)
 RUN npm install --save
 
+# Analyze compressed files
+RUN npm install -g webpack-bundle-analyzer (not in the project)
+RUN ng build --stats-json
+RUN webpack-bundle-analyzer path/to/your/stats.json
 
-// REMOVER ALERTAS DE NPM PACKAGES (NPM INSTALL)
