@@ -20,7 +20,10 @@ RUN ncu -u (npm install -g npm-check-updates)
 RUN npm install --save
 
 # Analyze compressed files
-RUN npm install -g webpack-bundle-analyzer (not in the project)
+RUN npm install -g source-map-explorer (not in the project)
 RUN ng build --stats-json
-RUN webpack-bundle-analyzer path/to/your/stats.json
+RUN source-map-explorer path/to/dist/*.*{,.map} --opts (options)
 
+# Performance tests of files in dist
+RUN npm install http-server -g (not in the project)
+RUN http-server ./dist/sandbox-angular/ -g
